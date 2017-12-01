@@ -24,6 +24,6 @@ class ValidationException extends RequestException
             }
         }
 
-        $this->message = $message;
+        $this->message = $message.' - '.print_r($errors, true);
     }
 }
