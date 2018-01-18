@@ -25,6 +25,7 @@ class Vindi
      * @var string
      */
     public static $apiKeyEnvVar = 'VINDI_API_KEY';
+    public static $baseApiEnvVar = 'VINDI_API_BASE';
 
     /**
      * The Environment variable name for API Time Out.
@@ -55,7 +56,10 @@ class Vindi
     {
         return getenv(static::$apiKeyEnvVar);
     }
-
+    public static function getApiBase()
+    {
+        return getenv(static::$baseApiEnvVar);
+    }
     /**
      * Get Vindi API Time Out from environment.
      *
