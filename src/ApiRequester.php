@@ -29,9 +29,9 @@ class ApiRequester
     /**
      * ApiRequester constructor.
      */
-    public function __construct()
+    public function __construct($key = null, $uri = null)
     {
-        $this->client = new Client;
+        $this->client = new Client([], $key, $uri);
     }
 
     /**

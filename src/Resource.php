@@ -12,9 +12,9 @@ abstract class Resource
     /**
      * Resource constructor.
      */
-    public function __construct()
+    public function __construct($key = null, $uri = null)
     {
-        $this->apiRequester = new ApiRequester;
+        $this->apiRequester = new ApiRequester($key, $uri);
     }
 
     /**
